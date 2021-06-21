@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "deploy": "npm run build && gh-pages -d dist",
     "dev": "cross-env NODE_ENV=development webpack --mode development",
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "start": "cross-env NODE_ENV=development webpack serve --mode development --open"
@@ -21,6 +22,7 @@
     "css-loader": "^5.2.6",
     "cssnano": "^5.0.6",
     "file-loader": "^6.2.0",
+    "gh-pages": "^3.2.2",
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.1",
     "less": "^4.1.1",
