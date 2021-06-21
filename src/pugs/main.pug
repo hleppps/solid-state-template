@@ -1,0 +1,147 @@
+hr
+main.main
+
+
+  section.main__posts_list
+    div.main__headings.main__posts_list__heading
+      i(class="main__posts_list__heading_icon far fa-gem")
+      h1.main__posts_list__heading_base THIS IS SOLID STATE
+      p.main__posts_list__heading_sub ANOTHER FREE + FULLY RESPONSIVE SITE TEMPLATE BY HTML5 UP
+
+    - 
+      let postsListData = [
+        {
+          'heading': 'MAGNA ARCU FEUGIAT',
+          'pharagraph': 'Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.',
+          'linkText': 'LEARN MORE',
+          'linkUrl': '',
+          'imgSrc': 'posts-list-pic01.jpg'
+        }, 
+        {
+          'heading': 'TEMPUS ADIPISCING',
+          'pharagraph': 'Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.',
+          'linkText': 'LEARN MORE',
+          'linkUrl': '',
+          'imgSrc': 'posts-list-pic02.jpg'
+        },
+        {
+          'heading': 'NULLAM DIGNISSIM',
+          'pharagraph': 'Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.',
+          'linkText': 'LEARN MORE',
+          'linkUrl': '',
+          'imgSrc': 'posts-list-pic03.jpg'
+        }
+      ]
+    - let counter = 0
+
+    div.main__posts_list__content
+      while counter < postsListData.length
+        div(class="main__posts_list__post__wrapper" id="main__posts_list__post__wrapper_" + counter)
+          article.main__posts_list__post
+            img.main__posts_list__post_image(src=`../assets/images/${postsListData[counter].imgSrc}`)
+            div.main__posts_list__post_text
+              h2.main__posts_list__post_text__heading= postsListData[counter].heading
+              p.main__posts_list__post_text__paragraph= postsListData[counter].pharagraph
+              a.main__posts_list__post_text__link(href= postsListData[counter].linkUrl)= postsListData[counter].linkText
+            - ++counter
+
+  div.main__posts_table__wrapper
+    section.main__posts_table
+      div.main__headings.main__posts_table__heading
+        h2.main__posts_table__heading_base VITAE PHASELLUS
+        p.main__posts_table__heading_sub Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.
+
+      - 
+        let postsTableData = [
+          {
+            'heading': 'SED FEUGIAT LOREM',
+            'pharagraph': 'Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.',
+            'linkText': 'LEARN MORE',
+            'linkUrl': '',
+            'imgSrc': 'posts-table-pic01.jpg'
+          }, 
+          {
+            'heading': 'NISL PLACERAT',
+            'pharagraph': 'Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.',
+            'linkText': 'LEARN MORE',
+            'linkUrl': '',
+            'imgSrc': 'posts-table-pic02.jpg'
+          },
+          {
+            'heading': 'ANTE FERMENTUM',
+            'pharagraph': 'Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.',
+            'linkText': 'LEARN MORE',
+            'linkUrl': '',
+            'imgSrc': 'posts-table-pic03.jpg'
+          },
+          {
+            'heading': 'FUSCE CONSEQUAT',
+            'pharagraph': 'Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.',
+            'linkText': 'LEARN MORE',
+            'linkUrl': '',
+            'imgSrc': 'posts-table-pic04.jpg'
+          }
+        ]
+      - counter = 0
+
+      div.main__posts_table__content
+        while counter < postsTableData.length
+          article.main__posts_table__post
+            img.main__posts_table__post_image(src=`../assets/images/${postsTableData[counter].imgSrc}`)
+            div.main__posts_table__post_text
+              h3.main__posts_table__post_text__heading= postsTableData[counter].heading
+              p.main__posts_table__post_text__paragraph= postsTableData[counter].pharagraph
+              a.main__posts_table__post_text__link(href= postsTableData[counter].linkUrl)= postsTableData[counter].linkText
+            - ++counter
+        button.main__posts_table__button BROWSE ALL
+    
+  
+  section.main__contact
+    div.main__headings.main__contact__heading
+      h2.main__contact__heading_base GET IN TOUCH
+      p.main__contact__heading_sub Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.
+
+    div.main__contact__content
+      form.main__contact__content__inputs
+        div.main__contact__content__input
+          h3.main__contact__content_input_title NAME
+          input.main__contact__content__input_textfield(type="text")
+        div.main__contact__content__input
+          h3.main__contact__content_input_title EMAIL 
+          input.main__contact__content__input_textfield(type="text")
+        div.main__contact__content__input
+          h3.main__contact__content_input_title MESSAGE
+          textarea(class="main__contact__content__input_textfield main__contact__content__input_textarea")
+        input(class="main__contact__content__submit" type="submit" value="SEND MESSAGE")
+
+      div.main__contact__content__info
+        div.main__contact__content__info_text__wrapper
+          span(class="main__contact__content__info_logo")
+            i(class="fas fa-home")
+          p(class="main__contact__content__info_text")
+            span Untitled Inc
+            span Somewhere Road Suite #2894
+            span Nashville, TN 00000-0000
+        div.main__contact__content__info_text__wrapper
+          span(class="main__contact__content__info_logo")
+            i(class="fas fa-phone")
+          a(class="main__contact__content__info_text" href="tel:+380000000000") +38 (000) 000-00-00
+        div.main__contact__content__info_text__wrapper
+          span(class="main__contact__content__info_logo")
+            i(class="fas fa-envelope")
+          a(class="main__contact__content__info_text" href="mailto:information@untitled.tld") information@untitled.tld
+        div.main__contact__content__info_text__wrapper
+          span(class="main__contact__content__info_logo")
+            i(class="fab fa-twitter")
+          a(class="main__contact__content__info_text" href="" target="_blank") twitter.com/untitled-tld
+        div.main__contact__content__info_text__wrapper
+          span(class="main__contact__content__info_logo")
+            i(class="fab fa-facebook-f")
+          a(class="main__contact__content__info_text" href="" target="_blank") facebook.com/untitled-tld
+        div.main__contact__content__info_text__wrapper
+          span(class="main__contact__content__info_logo")
+            i(class="fab fa-instagram")
+          a(class="main__contact__content__info_text" href="" target="_blank") instagram.com/untitled-tld
+
+
+
