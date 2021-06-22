@@ -1,0 +1,78 @@
+.header {
+  display        : flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items    : center;
+  position       : fixed;
+  z-index        : 5;
+
+  background-color: transparent;
+  transition: background 0.5s ease;
+  
+  box-sizing: border-box;
+  width     : 100%;
+  padding   : 10px 30px;
+}
+
+.header_show {
+  background-color: rgba(53, 56, 73, 0.95);
+
+  .header__button_home {
+    opacity: 1;
+  }
+  
+}
+
+.header__button {
+  .responsive-font(18, 15);
+  font-weight   : 700;
+  letter-spacing: 2px;
+  line-height: inherit;
+  
+  color: @colorWhite;
+}
+
+.header__button_home {
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.header__button_menu {
+  font-family: "Raleway";
+  background-color: transparent;
+  border          : 2px solid rgba(255, 255, 255, 0.2);
+  border-radius   : 5px;
+
+  padding: 15px 25px;
+}
+
+@media screen and (max-width: 740px) {
+  .header__button_menu {
+    border: none;
+    padding: 10px 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header__button_menu {
+    padding: 5px 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header__button_menu_text {
+    display: none;
+  }
+}
+
+.header__button_menu_icon {
+  &::after {
+    .fa-icon;
+    .fa;
+    content: '\f0c9';
+    margin-left: 10px;
+  }
+}
+
+

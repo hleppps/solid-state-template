@@ -1,5 +1,6 @@
 @import "Raleway.css";
 @import "reset.css";
+@import "header.less";
 @import "main.less";
 @import "footer.less";
 @import '~@fortawesome/fontawesome-free/less/fontawesome.less';
@@ -8,13 +9,22 @@
 
 
 body {
-  background-color: #2e3141;
-  background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../assets/images/background.jpg");
-  background-size: auto, cover;
-  background-attachment: fixed, fixed;
-  background-position: center, center;
-
+  &::before {
+    content: ' ';
+    display: block;
+    background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../assets/images/background.jpg");
+    background-position: center; 
+    background-size: cover;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: -10; 
+  }
+  
   font-family: "Raleway";
+  background-color: #2e3141;
 }
 
 
@@ -24,7 +34,7 @@ body {
 @maxWidth  : 1210px;
 
 .width-limiter {
-  padding: 0 20px;
+  padding: 0 30px;
   max-width: @maxWidth;
   margin   : 0 auto;
 }
