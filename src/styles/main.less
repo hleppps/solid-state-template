@@ -18,7 +18,6 @@
 .main__posts_list__heading_icon {
   .responsive-font(32);
 
-  color        : @colorWhite;
   border       : 2px solid rgba(255, 255, 255, .2);
   border-radius: 100%;
 
@@ -28,15 +27,14 @@
 
 @media screen and (max-width: 500px) {
   .main__posts_list__heading_icon {
-    padding      : 20px 15px 15px 15px;
+    padding: 20px 15px 15px 15px;
   }
 }
 
 .main__posts_list__heading_base {
-  color        : @colorWhite;
   border-bottom: 2px solid rgba(255, 255, 255, .125);
 
-  .responsive-font(40, 22);
+  .responsive-font(40, 24 );
   font-weight   : 600;
   letter-spacing: .05em;
 
@@ -49,8 +47,6 @@
   .responsive-font(22);
   opacity    : .7;
   font-weight: 300;
-
-  color: @colorWhite;
 
   margin-bottom: 40px;
 }
@@ -79,12 +75,12 @@
 
 .main__posts_list__post__wrapper:nth-child(2n+1) .main__posts_list__post {
   flex-direction: row-reverse;
-  text-align    : right; 
+  text-align    : right;
 }
 
 .main__posts_list__post {
   .width-limiter;
-  padding-top: 60px;
+  padding-top   : 60px;
   padding-bottom: 25px;
 
   display: flex;
@@ -93,22 +89,30 @@
 @media screen and (max-width: 500px) {
   .main__posts_list__post__wrapper:nth-child(2n+1) .main__posts_list__post {
     flex-direction: column;
-    align-items: flex-end;
+    align-items   : flex-end;
   }
-  
+
   .main__posts_list__post {
     flex-direction: column;
 
-    padding-top: 10px;
+    padding-top   : 10px;
     padding-bottom: 10px;
   }
 }
 
 .main__posts_list__post_image {
   border-radius: 100%;
-  max-width: min(40vw, 50%);
-  height: 100%;
-  max-height: 80%;
+  width        : min(30%, 30vw);
+}
+
+@media screen and (max-width: 900px) {
+  .main__posts_list__post_image {
+    max-width : 35vw;
+    max-height: 35vw;
+
+    width : 100%;
+    height: 100%;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -162,10 +166,9 @@
 .main__posts_list__post_text__heading {
   .responsive-font(20, 18);
   font-weight: 600;
-  
-  color        : @colorWhite;
+
   border-bottom: solid 2px rgba(255, 255, 255, 0.125);
-  
+
   padding-bottom: 25px;
   margin-bottom : 20px;
 }
@@ -174,11 +177,10 @@
 
 .main__posts_list__post_text__paragraph {
   .responsive-font(18, 14, 35, 25);
-  font-weight   : 400;
-  letter-spacing: .5px;
+  font-weight      : 400;
+  letter-spacing   : .5px;
   // line-height   : 35px;
 
-  color  : @colorWhite;
   opacity: .9;
 
   margin-bottom: 20px;
@@ -194,14 +196,13 @@
 
   &::before {
     .responsive-font(17);
-    
+
     .fa-icon;
     .fas;
     content      : @fa-var-angle-right;
-    color        : @colorWhite;
     border       : 1.8px solid rgba(255, 255, 255, .2);
     border-radius: 100%;
-    
+
     margin-right: 20px;
     padding     : 10px 13px 10px 16px;
   }
@@ -229,7 +230,6 @@
   font-weight   : 600;
   letter-spacing: .8px;
 
-  color        : @colorWhite;
   border-bottom: solid 2px rgba(255, 255, 255, 0.125);
 
   padding-bottom: 25px;
@@ -241,7 +241,6 @@
   font-weight   : 400;
   letter-spacing: .3px;
 
-  color  : @colorWhite;
   opacity: .85;
 
   margin-bottom: 55px;
@@ -289,7 +288,6 @@
   font-weight   : 600;
   letter-spacing: .8px;
 
-  color        : @colorWhite;
   border-bottom: solid 1px rgba(255, 255, 255, 0.2);
 
   padding-bottom: 20px;
@@ -301,7 +299,6 @@
   font-weight   : 400;
   letter-spacing: .3px;
 
-  color  : @colorWhite;
   opacity: .85;
 
   margin-bottom: 50px;
@@ -311,20 +308,19 @@
   .responsive-font(17, 14);
   font-weight   : 800;
   letter-spacing: .8px;
-
-  color          : @colorWhite;
+  
+  color: @colorWhite;
   text-decoration: none;
 
   &::before {
     .responsive-font(17);
-    
+
     .fa-icon;
     .fas;
     content      : @fa-var-angle-right;
-    color        : @colorWhite;
     border       : 1.8px solid rgba(255, 255, 255, .2);
     border-radius: 100%;
-    
+
     margin-right: 20px;
     padding     : 10px 13px 10px 16px;
   }
@@ -371,7 +367,6 @@
   font-weight   : 600;
   letter-spacing: .8px;
 
-  color        : @colorWhite;
   border-bottom: solid 2px rgba(255, 255, 255, 0.125);
 
   padding-bottom: 25px;
@@ -384,7 +379,6 @@
   letter-spacing: .3px;
   line-height   : 35px;
 
-  color  : @colorWhite;
   opacity: .85;
 
   margin-bottom: 55px;
@@ -407,22 +401,20 @@
 
 .main__contact__content_input_title {
   .responsive-font(18);
-  font-weight: 600;
+  font-weight   : 600;
   letter-spacing: .6px;
 
-  color: @colorWhite;
 
   margin-bottom: 15px;
 }
 
 .main__contact__content__input_textfield {
   background-color: transparent;
-  color: @colorWhite;
 
-  border: solid 2px rgba(255, 255, 255, 0.2);
+  border       : solid 2px rgba(255, 255, 255, 0.2);
   border-radius: 5px;
 
-  box-sizing   : border-box;
+  box-sizing: border-box;
 
   width        : 100%;
   padding      : 20px 20px;
@@ -449,7 +441,7 @@
   .responsive-font(17);
   font-weight   : 600;
   letter-spacing: .5px;
-  opacity: .9;
+  opacity       : .9;
 
   color           : @colorWhite;
   background-color: transparent;
@@ -472,23 +464,22 @@
 }
 
 .main__contact__content__info_text__wrapper {
-  display : flex;
+  display    : flex;
   align-items: center;
 }
 
 .main__contact__content__info_logo {
   .responsive-font(18);
 
-  display : flex;
-  align-items: center;
+  display        : flex;
+  align-items    : center;
   justify-content: center;
 
-  color : @colorWhite;
-  border: solid 2px rgba(255, 255, 255, 0.2);
-  border-radius :100%;
-  
-  width : 40px;
-  height : 40px;
+  border       : solid 2px rgba(255, 255, 255, 0.2);
+  border-radius: 100%;
+
+  width       : 40px;
+  height      : 40px;
   margin-right: 20px;
 }
 
@@ -498,13 +489,13 @@
   letter-spacing: .3px;
   line-height   : 35px;
 
-  display : flex;
+  display       : flex;
   flex-direction: column;
 
   text-decoration: none;
-  color  : @colorWhite;
-  opacity: .85;
+  color          : @colorWhite;
+  opacity        : .85;
 
-  margin-top: 20px;
+  margin-top   : 20px;
   margin-bottom: 20px;
 }

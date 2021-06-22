@@ -1,0 +1,9 @@
+//- NAVIGATION
+
+nav.nav
+  i(class="nav__close-btn close-btn fa fa-times")
+  h3.nav__heading MENU
+  ul.nav__list
+    each val in ['HOME', 'GENERIC', 'ELEMENTS', 'LOG IN', 'SIGN UP']
+      li.nav__list_item
+        a(class='nav__list_item_link' href='')= val

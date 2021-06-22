@@ -1,5 +1,6 @@
 @import "Raleway.css";
 @import "reset.css";
+@import "pop-up_elements.less";
 @import "header.less";
 @import "main.less";
 @import "footer.less";
@@ -22,7 +23,8 @@ body {
     position: fixed;
     z-index: -10; 
   }
-  
+
+  color: @colorWhite;  
   font-family: "Raleway";
   background-color: #2e3141;
 }
@@ -71,7 +73,7 @@ body {
   }
 }
 
-.responsive-font(@pcSize, @mobSize : 16, @pcHeight : 35, @mobHeight : 25) {
+.responsive-font(@pcSize, @mobSize : 18, @pcHeight : 35, @mobHeight : 25) {
   @addSize   : @pcSize - @mobSize;
   @addHeight : @pcHeight - @mobHeight;
   @mobSizePx : unit(@mobSize, px);
