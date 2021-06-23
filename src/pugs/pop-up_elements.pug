@@ -1,7 +1,11 @@
+//- UNDERLAY
+
+div(class="underlay" id="underlay")
+
 //- NAVIGATION
 
-nav.nav
-  i(class="nav__close-btn close-btn fa fa-times")
+nav(class='nav' id='nav')
+  div(class='nav__close-btn close-btn' id="test")
   h3.nav__heading MENU
   ul.nav__list
     each val in ['HOME', 'GENERIC', 'ELEMENTS', 'LOG IN', 'SIGN UP']
